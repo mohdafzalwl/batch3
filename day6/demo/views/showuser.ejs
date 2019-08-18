@@ -1,0 +1,10 @@
+<h1> user details</h1>
+<%=data.name %>
+<a href="/users/edit/<%=data._id%>">
+    edit</a>
+<form
+ action=
+ '/users/delete/<%=data._id%>
+ ?_method=DELETE' method="POST" >
+<button>delete</button>
+</form>

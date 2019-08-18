@@ -1,0 +1,21 @@
+<h1>User page</h1>
+<form action='/users' method="POST">
+    <input name='name' 
+    placeholder="enter name">
+    <input name='email' 
+    placeholder="enter email">
+    <button>Submit</button>
+</form>
+
+<ul style="border: 2px solid black">
+<% for(let i=0; i<data.length; i++) { %>
+     <li><%= data[i].name %></li>
+     <li><%= data[i].email %></li>
+     <li><%= data[i]._id %></li>
+     <a href="/users/<%=data[i]._id%>">Show More </a>
+     <hr>
+
+<%} %>
+</ul>
+
+

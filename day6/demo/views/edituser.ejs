@@ -1,0 +1,9 @@
+<h1>Edit user</h1>
+
+<form action='/users/update/<%=data._id%>?_method=PUT' method="POST">
+    <input name='name'  value="<%=data.name%>"
+    placeholder="enter name">
+    <input name='email' value="<%=data.email%>"
+    placeholder="enter email">
+    <button>Submit</button>
+</form>

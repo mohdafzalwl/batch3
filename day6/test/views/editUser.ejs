@@ -1,0 +1,8 @@
+this is edit page
+<%= data %>
+<br> 
+
+<form action="/users/edit/<%=data._id%>?_method=PUT" method="POST">
+<input name="email" placeholder="enter the email" >
+<button type="submit">Submit</button>
+</form>

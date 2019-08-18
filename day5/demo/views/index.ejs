@@ -1,0 +1,19 @@
+<% include ./partials/header.ejs %>
+
+<h1>
+    hello all
+</h1>
+
+<form action="/" method="POST">
+    <input name='name'>
+    <button type="submit">Submit</button>
+</form>
+
+
+<ul>
+<% for(var i=0 ; i< friends.length; i++) { %>
+            <li><%= friends[i] %></li>
+<% } %>
+</ul>
+
+<% include ./partials/footer.ejs %>

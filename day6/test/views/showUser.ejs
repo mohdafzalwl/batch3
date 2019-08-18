@@ -1,0 +1,12 @@
+Only Single User details
+
+<%= data.email %>
+<br>
+
+<a href='/users/edit/<%=data._id%>'>Edit</a>
+
+
+<form action="/users/delete/<%=data._id%>?_method=DELETE" method="POST">
+<button type="submit"> delete</button>
+
+</form>

@@ -1,0 +1,18 @@
+<h1>ADD New User</h1>
+
+<form action="/users/" method="POST">
+    <input name="email" placeholder="enter a new email ">
+    <button type="submit">SUbmit</button>
+
+</form>
+
+<br>
+
+All Users Data 
+
+<% for (var i =0 ; i< data.length; i ++) { %>
+ 
+    <li><%=data[i].email %></li>
+    <a href='/users/<%=data[i]._id %>'>More details</a>
+
+<% } %>
