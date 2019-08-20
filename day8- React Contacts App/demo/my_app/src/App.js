@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import ListContacts from './ListContacts'
- import Grid from './Grid'
-class App extends Component {
-  state= {
+import Counter from './Counter'
+import Contacts from './Contact'
+class App extends React.Component{
+  state={
     contacts : [
       {
         id: '1',
@@ -24,40 +24,36 @@ class App extends Component {
         avatarURL: 'https://res.cloudinary.com/dspz2t0am/image/upload/v1545377545/undraw_experts3_3njd.svg'
       },
     ],
-    count : 0
+    count : 0,
   }
-  
-  removeContact = (contact)=>{
-    this.setState({
-      contacts : this.state.contacts.filter((c)=> c.id !== contact.id)
-    })
-  }
-
-  inCrement = ()=>{
+  incrementCount = ()=>{
     this.setState({
       count : this.state.count + 1
     })
   }
+  decrementCount = ()=>{
+    this.setState({
+      count : this.state.count - 1 
+    })
+  }
+  
+  removeContact = (contact)=>{
+    this.setState({
+contacts: 
+this.state.contacts.filter((c)=> c.id !== contact.id)
+    })
+  }
 
-  // removeContact = (contact)=>{
-  //  console.log(contact)
-  // }
-
-
-  render() {
-    return (
-      <div className="App">
-
-       <ListContacts  
-       contacts={this.state.contacts}
-       onDeleteContact = {this.removeContact}
+  render(){
+    return(
+      <div>
        
-       />
-        <br/>
-        {/* <Grid/> */}
+        <Contacts contacts={this.state.contacts}
+         onDelete ={this.removeContact}/>
       </div>
-    );
+    )
   }
 }
+
 
 export default App;
